@@ -5,5 +5,7 @@ class Commune < ApplicationRecord
   has_and_belongs_to_many :streets
   
   validates :name, presence: true
-  validates :code_insee, presence: true
+  
+  validates :code_insee, length: { is: 5 }, presence: true
+  
 end

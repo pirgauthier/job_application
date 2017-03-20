@@ -5,7 +5,12 @@ class Intercommunality < ApplicationRecord
   
   validates :siren, presence: true
   validates_uniqueness_of :siren, :case_sensitive => false
+  validates_format_of :siren, :with => /[0-9]{9}/
+  validates :siren, length: { is: 9 }
+  
   validates :form, acceptance: { accept: ['ca', 'cu', 'cc', 'met'] }
+  
+  
   
   def communes_hash
     intercommunalities.map{ |i| [i.code_insee,i.name] }.to_h
