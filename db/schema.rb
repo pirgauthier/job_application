@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170320104938) do
+ActiveRecord::Schema.define(version: 20170320134424) do
 
   create_table "communes", force: :cascade do |t|
     t.integer "intercommunality_id"
     t.string  "name"
-    t.string  "code_inseee"
+    t.string  "code_insee"
     t.index ["intercommunality_id"], name: "index_communes_on_intercommunality_id"
   end
 
