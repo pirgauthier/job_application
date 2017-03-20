@@ -1,0 +1,2 @@
+class CommunesController < ApplicationController
+end

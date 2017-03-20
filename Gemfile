@@ -7,6 +7,7 @@ gem 'puma', '~> 3.0'
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'rspec-rails'
+  gem 'tzinfo-data'
 end
 
 group :development do
